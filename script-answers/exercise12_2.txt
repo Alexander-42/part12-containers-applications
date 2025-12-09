@@ -1,0 +1,10 @@
+Script started on 2025-12-09 07:29:40+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;alexander@home: ~/part12-containers-applications/script-answers[01;32malexander@home[00m:[01;34m~/part12-containers-applications/script-answers[00m$ docker run -it u buntu bash
+[?2004l[?2004h]0;root@9c70df14f6e8: /root@9c70df14f6e8:/# mkdir usr   /usr/src/app
+[?2004l[?2004h]0;root@9c70df14f6e8: /root@9c70df14f6e8:/# mk  touch /usr/src/i app/index, .js
+[?2004l[?2004h]0;root@9c70df14f6e8: /root@9c70df14f6e8:/# [Kexit
+[?2004lexit
+[?2004h]0;alexander@home: ~/part12-containers-applications/script-answers[01;32malexander@home[00m:[01;34m~/part12-containers-applications/script-answers[00m$ exit
+[?2004lexit
+
+Script done on 2025-12-09 07:30:30+02:00 [COMMAND_EXIT_CODE="0"]
