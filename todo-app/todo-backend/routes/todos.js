@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   res.send(todo);
 });
 
-const singleRouter = express.Router();
+const singleRouter = express.Router({mergeParams: true});
 
 const findByIdMiddleware = async (req, res, next) => {
   const { id } = req.params
@@ -41,7 +41,23 @@ singleRouter.get('/', async (req, res) => {
 
 /* PUT todo. */
 singleRouter.put('/', async (req, res) => {
-  res.sendStatus(405);
+  const currTodo = req.todo;
+  const newTodo = {
+    text: currTodo.text,
+    done: true,
+  }
+  console.log(newTodo);
+  const updatedTodo = await Todo.findByIdAndUpdate(
+    req.params.id,
+    newTodo,
+    {
+      new: true,
+      useFindAndModify: false,
+    }
+  );
+  console.log(updatedTodo);
+  res.send(updatedTodo);
+  
 });
 
 router.use('/:id', findByIdMiddleware, singleRouter)
